@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+ 
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Welcome to your personal Task List!</h1>
+    <br/>
+
+    <span>You can add any task you like by writing it in the specified field and
+      then press "Add new task"</span><br /><br />
+
+    
+
+    <input type="text" id="newTask" value=""/>
+    <input type="button" value="Add new Task" onclick="addNewTask()" /><br/><br/><br/>
+
+ <!-- // remove first task button // -->
+    <input type="button" value="Remove First Task" onclick="removeFirst()" /> <br/><br/>
+
+    <ul id="myTaskList">    
+<li> something</li>
+<li>new task</li>
+
+    </ul><br/><br/>
+    <!-- // remove last task button // -->
+
+ <input type="button" value="Remove Last Task" onclick="removeLast()" />
+
+    <hr />
+
+    <input type="color" placeholder="Color" id="colorPicker" />
+    <input
+      type="button"
+      value="Change task background"
+      onclick="changeTaskBackgroundColor()"
+    />
+
+    <hr />
+
+    <input type="button" value="Sort" onclick="bubblesort()" />
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+      
+      let addedTask= document.getElementById("newTask").value
+        const  addNewTask= function() {
+  let ul = document.getElementById("myTaskList")
+  let li = document.createElement("li")
+  li.appendChild(document.createTextNode(value))
+  ul.appendChild(li)
+
+        }}
+  </script>
+
+</body>
+</html>
