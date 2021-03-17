@@ -32,7 +32,7 @@
 
     <!-- // ----EXERCISE 3------ //  -->
 
-    <input type="button" value="Remove First Task" onclick="removeFirst()" />
+    <input type="button" value="Remove First Task" id="removeFirst" />
     <br /><br />
 
     <ul id="myTaskList">
@@ -78,6 +78,7 @@ addTaskbtn.onclick = addNewTask
 //      });
 
       // ----------EXERCISE 6 ---------------//
+
      const removeLastTask = function (){
          let listWithTasks= document.getElementById ("myTaskList")
              listWithTasks.removeChild(listWithTasks.lastElementChild)
@@ -85,6 +86,17 @@ addTaskbtn.onclick = addNewTask
      
 let removeTaskbtn = document.getElementById("removeLast")
 removeTaskbtn.onclick = removeLastTask
+
+
+// ----------EXERCISE 7 ---------------//
+      
+const removeFirstTask = function (){
+         let listWithTasks= document.getElementById ("myTaskList")
+             listWithTasks.removeChild(listWithTasks.firstElementChild)
+     }
+     
+let removeFirstTaskbtn = document.getElementById("removeFirst")
+removeFirstTaskbtn.onclick = removeFirstTask
       // }
     </script>
   </body>
