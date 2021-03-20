@@ -50,8 +50,8 @@
     <input
       type="button"
       value="Change task background"
-      onclick="changeTaskBackgroundColor()"
-    />
+      id= "changeBg">
+      
 
     <hr />
 
@@ -64,11 +64,11 @@
         
         const addNewTask = function () {
             let addedTask = document.getElementById("newTask").value;
-            console.log('trieggered')
           let ul = document.getElementById("myTaskList");
           let li = document.createElement("li");
           li.innerText = addedTask
-          ul.appendChild(li);
+          ul.appendChild(li)
+          document.getElementById("newTask").value = "";
         };
 
 
@@ -98,6 +98,23 @@ const removeFirstTask = function (){
 let removeFirstTaskbtn = document.getElementById("removeFirst")
 removeFirstTaskbtn.onclick = removeFirstTask
       // }
+
+// ----------EXERCISE 8 ---------------//
+    
+    let tasksList= document.getElementById ("myTaskList").innerHTML
+ 
+
+ // ----------EXERCISE 9 ---------------//
+ 
+const changeTaskBackgroundColor = function () {
+  
+let tasksListTag= document.getElementById("myTaskList")
+ let choosedColor= document.getElementById("colorPicker").value
+tasksListTag.style.backgroundColor = choosedColor
+}
+let btn= document.getElementById("changeBg")
+btn.onclick = changeTaskBackgroundColor
+
     </script>
   </body>
 </html>
